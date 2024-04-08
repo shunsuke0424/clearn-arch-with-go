@@ -1,6 +1,6 @@
 package usecase
 
-import "github.com/so-heee/golang-clean-architecture-example/api/domain"
+import "clearn-arch-with-go/api/domain"
 
 type UserInteractor struct {
 	UserRepository UserRepository

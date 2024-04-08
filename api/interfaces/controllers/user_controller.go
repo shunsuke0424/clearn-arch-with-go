@@ -3,10 +3,11 @@ package controllers
 import (
 	"strconv"
 
+	"clearn-arch-with-go/api/domain"
+	"clearn-arch-with-go/api/interfaces/database"
+	"clearn-arch-with-go/api/usecase"
+
 	"github.com/labstack/echo"
-	"github.com/so-heee/golang-clean-architecture-example/api/domain"
-	"github.com/so-heee/golang-clean-architecture-example/api/interfaces/database"
-	"github.com/so-heee/golang-clean-architecture-example/api/usecase"
 )
 
 type UserController struct {

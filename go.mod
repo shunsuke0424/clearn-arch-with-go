@@ -1,4 +1,5 @@
-module github.com/so-heee/golang-clean-architecture-example
+module clearn-arch-with-go
+
 go 1.19
 
 require (
@@ -17,8 +18,6 @@ require (
 	github.com/labstack/gommon v0.4.0 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.16 // indirect
-	github.com/so-heee/golang-clean-architecture-example/api v0.0.0-20200123022029-d0778ae4a940 // indirect
-	github.com/t-shimpo/go-echo-gorm-rest v0.0.0-20221230102818-cc645a74ea0d // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v1.2.2 // indirect
 	golang.org/x/crypto v0.2.0 // indirect

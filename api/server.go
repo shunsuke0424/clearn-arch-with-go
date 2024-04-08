@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/so-heee/golang-clean-architecture-example/api/infrastructure"
+	"clearn-arch-with-go/api/infrastructure"
 )
 
 func main() {

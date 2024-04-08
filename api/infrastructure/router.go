@@ -1,9 +1,10 @@
 package infrastructure
 
 import (
+	"clearn-arch-with-go/api/interfaces/controllers"
+
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
-	"github.com/so-heee/golang-clean-architecture-example/api/interfaces/controllers"
 )
 
 func Init() {

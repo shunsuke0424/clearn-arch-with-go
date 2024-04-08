@@ -1,7 +1,7 @@
 package database
 
 import (
-	"github.com/so-heee/golang-clean-architecture-example/api/domain"
+	"clearn-arch-with-go/api/domain"
 )
 
 type UserRepository struct {
