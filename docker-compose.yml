@@ -1,24 +1,25 @@
 version: '3.8'
-
 services:
   app:
     container_name: app
     build:
       context: .
-      dockerfile: app.dockerfile
+      dockerfile: ./docker/api/Dockerfile
     tty: true
     ports:
       - 8080:8080
+    # depends_on:
+    #   - db
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     volumes:
       - .:/app
-
   db:
     container_name: db
     build:
       context: .
-      dockerfile: db.dockerfile
+      dockerfile: ./docker/mysql/Dockerfile
     tty: true
     ports:
       - 3306:3306
@@ -27,6 +28,10 @@ services:
       MYSQL_DATABASE: "test"
       MYSQL_USER: "tester"
       MYSQL_PASSWORD: "password"
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -u root -ppassword"]
+      timeout: 20s
+      retries: 10
     volumes:
       - type: volume
         source: mysql_data
